@@ -8,7 +8,7 @@ A* Pathfinding Algorithm
 
 > https://en.wikipedia.org/wiki/A*_search_algorithm
 
-This is a Rust implementation of A*, which searches through a graph data structure to construct a path between a start and an end point.
+This is a simple Rust implementation of A*, which searches through a graph data structure to construct a path between a start and an end point.
 A* uses a heuristic function to guide the algorithm towards the end point in an efficient manner.
 
 ## Specifics
@@ -18,4 +18,4 @@ This is intended for a VS Code environment.
 
 ## Notes
 
-This is a test program written for a school project, and to strengthen Rust skills. We caution agaist using this repo for new work as it has not been rigourously tested against all edge cases.
+This is a test program written for a school project, and to strengthen Rust skills. It may not be viable for new work due to the fixed-size limitation. It has not been rigorously tested.
