@@ -14,6 +14,7 @@ A* uses a heuristic function to guide the algorithm towards the end point in an 
 ## Specifics
 
 This implementation uses Euclidean (straight-line) distance for the heuristic and is based on a fixed-size binary array to represent the graph, where 1's are pathable spaces.
+This is intended for a VS Code environment.
 
 ## Notes
 
