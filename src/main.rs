@@ -68,10 +68,11 @@ Generally assumes that a path exists
 fn print_path(node_graph: &Vec<Vec<Node>>, start: &Node, end: &Node) {
     let mut path_trace: Vec<Node> = vec![];
     let mut cur_node = end;
-    while cur_node.row != start.row && cur_node.col != start.col {
+    while cur_node.row != start.row || cur_node.col != start.col {
         path_trace.push(*cur_node);
         cur_node = &node_graph[cur_node.row_parent as usize][cur_node.col_parent as usize];
     }
+    path_trace.push(*cur_node);
     path_trace.reverse();
     for node in path_trace {
         eprint!("({}, {}) -> ", node.row, node.col);
@@ -173,8 +174,8 @@ fn main() {
     
     eprint!("Attempting to search...\n");
     astar_find(&graph,
-        Node{row: 0, col: 1, row_parent: 0, col_parent: 1, f: 0.0, g: 0.0, h: 0.0},
-        Node{row: 3, col: 6, row_parent: 3, col_parent: 6, f: 0.0, g: 0.0, h: 0.0}
+        Node{row: 0, col: 0, row_parent: 0, col_parent: 0, f: 0.0, g: 0.0, h: 0.0},
+        Node{row: 5, col: 5, row_parent: 5, col_parent: 5, f: 0.0, g: 0.0, h: 0.0}
     );
     eprint!("Done.\n"); 
 }
