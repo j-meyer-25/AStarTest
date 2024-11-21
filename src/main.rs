@@ -1,7 +1,5 @@
 //////////////////////////////////////////////////
 // Fixed-Size Rust A* Implementation (Unstable) //
-// Josh Meyer, Alex Burkholder                  //
-// Spring 2024                                  //
 //////////////////////////////////////////////////
 
 const COLS: usize = 8;
